@@ -2,7 +2,7 @@
 const express=require('express');
 const App = express();
 const path=require('path');
-const port=process.env.port||5000;
+// const port=process.env.port||5000;
 const requests=require('requests');
 const hbs=require('hbs');
 
@@ -50,6 +50,6 @@ App.get('*',(req,res)=>{
 
 
 
-App.listen(port,()=>{
+App.listen(process.env.PORT || 3000,()=>{
     console.log(`Server listen at port number ${port}`);
 })
